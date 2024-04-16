@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-      "employee-ui": {
+      "sample-ui": {
         "projectType": "application",
         "schematics": {
           "@schematics/angular:component": {
@@ -24,7 +24,7 @@
           "build": {
             "builder": "ngx-build-plus:browser",
             "options": {
-              "outputPath": "dist/employee-ui",
+              "outputPath": "dist/sample-ui",
               "index": "src/index.html",
               "main": "src/main.ts",
               "polyfills": [
@@ -63,7 +63,7 @@
                 "optimization": false,
                 "extractLicenses": false,
                 "sourceMap": true,
-                 "baseHref": "/interview-builder/employee/"
+                 "baseHref": "/interview-builder/sample/"
               }
             },
             "defaultConfiguration": "production"
@@ -71,18 +71,18 @@
           "serve": {
             "builder": "ngx-build-plus:dev-server",
             "options": {
-              "buildTarget": "employee-ui:build",
-                          "publicHost": "http://employee-ui-service-dev",
+              "buildTarget": "sample-ui:build",
+                          "publicHost": "http://sample-ui-service-dev",
                           "port": 4205,
               "extraWebpackConfig": "webpack.config.js"
             },
             "configurations": {
               "development": {
-                              "buildTarget": "employee-ui:build:development",
+                              "buildTarget": "sample-ui:build:development",
                               "extraWebpackConfig": "webpack.config.js"
                           },
                           "production": {
-                              "buildTarget": "employee-ui:build:production",
+                              "buildTarget": "sample-ui:build:production",
                               "extraWebpackConfig": "webpack.prod.config.js"
                           }
             },
@@ -91,7 +91,7 @@
           "extract-i18n": {
             "builder": "ngx-build-plus:extract-i18n",
             "options": {
-              "buildTarget": "employee-ui:build",
+              "buildTarget": "sample-ui:build",
               "extraWebpackConfig": "webpack.config.js"
             }
           },
