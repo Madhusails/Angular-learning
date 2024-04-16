@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
-import { EmployeeModule } from './employee/employee.module';
+import { SampleModule } from './sample/sample.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,10 +17,12 @@ import { EmployeeModule } from './employee/employee.module';
     CommonModule,
     HttpClientModule,
     AppRoutingModule,
-    EmployeeModule,
+    SampleModule,
     RouterOutlet,
     MatCheckboxModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   bootstrap: [AppComponent]
 })

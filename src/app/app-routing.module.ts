@@ -1,18 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CAN_ROUTES } from './employee/employee.routes';
-import { EmployeeModule } from './employee/employee.module';
+import { SampleModule } from './sample/sample.module';
 
 const routes: Routes = [
     {
         path: '',
-        loadChildren: () => import('./employee/employee.module').then(m => m.EmployeeModule),
+        loadChildren: () => import('./sample/sample.module').then(m => m.SampleModule),
         pathMatch: 'prefix'
     }
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes), EmployeeModule],
+    imports: [RouterModule.forRoot(routes), SampleModule],
     exports: [RouterModule]
 })
 export class AppRoutingModule { }

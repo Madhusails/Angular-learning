@@ -5,7 +5,7 @@ const share = mf.share;
 
 module.exports = {
   output: {
-    uniqueName: "employee",
+    uniqueName: "sample",
     publicPath: "auto"
   },
   optimization: {
@@ -18,10 +18,10 @@ module.exports = {
     new ModuleFederationPlugin({
         library: { type: "module" },
 
-       name: "employees",
+       name: "sample",
        filename: "remoteEntry.js",
        exposes: {
-           './Module': './src/app/employee/employee.module.ts',
+           './Module': './src/app/sample/sample.module.ts',
        },
 
         shared: share({
